@@ -1,0 +1,93 @@
+@mixin extradesktop {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+@mixin smallScreen {
+  @media (max-width: 390px) {
+    @content;
+  }
+}
+
+.click-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -20px;
+  width: calc(100% + 40px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .right-arrow-btn {
+    background-color: transparent;
+    border: none;
+  }
+  .left-arrow-btn {
+    background-color: transparent;
+    border: none;
+  }
+}
+.click-buttoned {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -20px;
+  width: calc(100% + 40px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include tablet() {
+    display: none;
+  }
+  .right-arrow-btn {
+    background-color: transparent;
+    border: none;
+  }
+  .left-arrow-btn {
+    background-color: transparent;
+    border: none;
+  }
+}
+.click-btns {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -9px;
+  width: calc(100% + 18px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  @include smallScreen() {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -1px;
+    width: calc(100% + -1px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    button {
+      svg {
+        width: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,623 @@
+@mixin desktop {
+  @media (max-width: 968px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+@mixin smallScreen {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+
+// video section
+
+.video-title {
+  font-size: inherit;
+  margin-bottom: 0.5rem;
+}
+// video section
+
+// manfare section
+
+.manfare-img {
+  background-image: url(../../../assets/manfareImage/manfare-img-2.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 50vh;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+
+  @include smallScreen() {
+    height: 25vh;
+  }
+  .manfare-img-2 {
+    aspect-ratio: 4.95455 / 1;
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img {
+      height: 20rem;
+      width: 1400px;
+      max-width: 100%;
+      @include tablet() {
+        height: 40vh;
+      }
+      @include mobile() {
+        height: 40vh;
+      }
+      @include smallScreen() {
+        height: 10rem;
+        width: 100%;
+      }
+    }
+    @include tablet() {
+      width: 100%;
+    }
+    @include mobile() {
+      width: 100%;
+    }
+    @include smallScreen() {
+      width: 100%;
+    }
+  }
+}
+
+// manfare section
+
+// Panjabi section
+.carousels-main {
+  .carousel-col-1 {
+    .carousel-img-1 {
+      img {
+        width: 346px;
+        object-fit: cover;
+        height: 512px;
+      }
+    }
+  }
+  .carousel-col-2 {
+    padding: 25px;
+    @include smallScreen() {
+      padding: 24px;
+    }
+  }
+}
+.t-shrit-main {
+  // flex-direction: column-reverse;
+  display: flex;
+  @include desktop() {
+    flex-direction: column-reverse;
+  }
+  @include tablet() {
+    flex-direction: column-reverse;
+  }
+  @include mobile() {
+    flex-direction: column-reverse;
+  }
+  @include smallScreen() {
+    flex-direction: column-reverse;
+  }
+}
+
+// Panjabi section
+
+// Subscribe for offers
+.cards {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  border-radius: 1rem;
+  border: none;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  box-shadow: 2.351px 3.236px 7.5px hsla(0, 0%, 61%, 0.37);
+  background-color: #fff;
+  @include desktop() {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  @include tablet() {
+    padding: 10px 24px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  @include mobile() {
+    padding: 10px 24px;
+    border-radius: 10px;
+  }
+  @include smallScreen() {
+    padding: 10px 24px;
+    border-radius: 10px;
+  }
+  .offer-content {
+    .offer-title-1 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      margin-bottom: 0.75rem;
+      font-weight: bold;
+      color: rgb(73 73 73/1);
+      @include desktop() {
+        font-size: 19px;
+      }
+      @include tablet() {
+        font-size: 22px;
+        padding-top: 5px;
+        margin-bottom: 0;
+      }
+    }
+    .offer-title-2 {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: rgb(55 54 54/1);
+      font-weight: 300;
+      @include desktop() {
+        font-size: 14px;
+      }
+      @include tablet() {
+        line-height: 1rem;
+      }
+    }
+  }
+  .input-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablet() {
+      display: flex;
+    }
+    @include mobile() {
+      text-align: center;
+    }
+    @include smallScreen() {
+      text-align: center;
+      display: flex;
+    }
+    input {
+      width: 40rem;
+      margin-right: 11px;
+      padding: 12px;
+      font-weight: 100;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid #bbbbbb;
+      @include desktop() {
+        padding: 0px;
+        margin-right: 10px;
+      }
+      @include tablet() {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        border-radius: 0px;
+        padding: 6px;
+      }
+      @include mobile() {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        border-radius: 0px;
+        padding: 4px;
+        width: 198px;
+      }
+      @include smallScreen() {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        border-radius: 0px;
+        padding: 4px;
+        width: 198px;
+      }
+      &:focus {
+        border: 1px solid #585858;
+      }
+      &::placeholder {
+        font: inherit;
+        color: #bbbbbb;
+        @include desktop() {
+          padding-left: 10px;
+        }
+
+        @include smallScreen() {
+          padding-left: 10px;
+          padding: 15px;
+        }
+      }
+    }
+    button {
+      font-size: 1rem;
+      padding: 10px 24px;
+      border-radius: 6px;
+      color: rgb(255 255 255 / 1);
+      font-weight: 500;
+      background-color: rgb(88 88 88/1);
+      @include tablet() {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        border-radius: 0px;
+        padding: 5px 24px;
+
+        // padding: ;
+      }
+      @include mobile() {
+        font-size: 0.875rem;
+        border-radius: 0.125rem;
+        line-height: 1.25rem;
+        padding: 6px 24px;
+      }
+
+      @include smallScreen() {
+        font-size: 0.875rem;
+        border-radius: 0.125rem;
+        line-height: 1.25rem;
+        padding: 6px 24px;
+      }
+    }
+  }
+}
+// Subscribe for offers
+
+// summer section
+
+.no-pro-found {
+  background-color: rgb(244 248 249/1);
+  border-radius: 0.375rem;
+  p {
+    font-weight: 700;
+    text-align: center;
+    padding: 2.5rem;
+  }
+}
+
+// footer
+
+.footer {
+  background-image: url(../../../assets/footerImages/footer-bg-img.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: auto;
+  width: auto;
+  .manfare-content {
+    @include desktop() {
+      text-align: center;
+    }
+    .phone-num {
+      font-size: 31px;
+      color: #b89579;
+      margin-top: 18px;
+      font-family: Bahnschrift, sans-serif;
+      font-weight: bold;
+    }
+    .manfare-text {
+      color: #fff;
+      font-family: Bahnschrift, sans-serif;
+      margin-top: -8px;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      span {
+        svg {
+          border: 1px solid rgb(184 149 121/1);
+          border-radius: 50%;
+          width: 35px;
+          padding: 7px;
+          height: 35px;
+        }
+      }
+      @include desktop() {
+        margin-bottom: 22px;
+        justify-content: center;
+      }
+    }
+  }
+  .manfare-sm-text {
+    font-size: 18px;
+    line-height: 18px;
+    color: rgb(184 149 121/1);
+    font-weight: 700;
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    @include desktop() {
+      margin-bottom: 22px;
+      text-align: center;
+    }
+  }
+  .contact-list {
+    color: #d0d0d0;
+    font-size: 15px;
+    font-family: Montserrat, sans-serif;
+    padding: 0;
+    margin-top: 20px;
+    @include smallScreen() {
+      font-size: 12px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 50rem;
+  @include tablet() {
+    max-width: 36rem;
+  }
+
+  .modal-header {
+    background-color: rgb(229 231 235/1);
+    position: relative;
+
+    .main-two-bottom {
+      @include mobile() {
+        flex-direction: column;
+      }
+      .facebook-img {
+        background-color: rgb(22, 48, 89);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-top-left-radius: 0.375rem;
+        border-bottom-left-radius: 0.375rem;
+        height: 39px;
+        img {
+          width: 64%;
+        }
+      }
+    }
+    .btn-close {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      color: #fff;
+      border-radius: 50%;
+      border: 3px solid blue;
+      padding: 5px;
+    }
+    .button-facebook {
+      background: rgb(15 84 154 / 1);
+      color: #fff;
+      border: 0;
+      border-radius: 0.375rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+      width: 250px;
+      .facebook-text {
+        margin-left: 62px;
+        font-family: monospace;
+      }
+    }
+    .google-main {
+      .button-google {
+        background: rgb(227 60 42/1);
+        color: #fff;
+        border: 0;
+        border-radius: 0.375rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        width: 250px;
+        .google-text {
+          margin-left: 62px;
+          font-family: monospace;
+        }
+      }
+      .google-img {
+        background: rgb(164 38 35/1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        padding: 4px;
+        left: 0;
+        top: 0;
+        border-top-left-radius: 0.375rem;
+        border-bottom-left-radius: 0.375rem;
+        height: 39px;
+        img {
+          width: 64%;
+        }
+      }
+    }
+    .close-bottom {
+      i {
+        background: black;
+        color: #fff;
+        border-radius: 50%;
+        padding: 4px;
+        border: 2px solid #fff;
+        position: absolute;
+        right: -14px;
+        top: -15px;
+      }
+    }
+  }
+}
+
+.modal-body {
+  .login-suff {
+    h4 {
+      font-size: 21px;
+      font-family: monospace;
+      color: gray;
+    }
+    input {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      text-align: center;
+      border: 1px solid rgb(199 199 199/1);
+      border-radius: 0.375rem;
+      outline: none;
+    }
+    input::placeholder {
+      font-size: 15px;
+    }
+    button {
+      background: linear-gradient(to right, #c0a086, #977b63);
+      border-radius: 0.375rem;
+      cursor: pointer;
+      border: 0;
+      padding: 6px;
+      color: #fff;
+    }
+  }
+}
+
+.main-form {
+  border-right: 2px solid #eee;
+  padding-inline-end: 15px;
+  form {
+    .mobile-number {
+      margin-bottom: 8px;
+      label {
+        font-size: 16px;
+        font-family: "circular";
+      }
+
+      input {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        border: 1px solid rgb(112 112 112/1);
+        border-radius: 0.25rem;
+        outline: none;
+        margin-top: 0.25rem;
+        width: 100%;
+      }
+    }
+    .password {
+      margin-bottom: 8px;
+      label {
+        font-size: 16px;
+        font-family: "circular";
+      }
+
+      input {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        border: 1px solid rgb(112 112 112/1);
+        border-radius: 0.25rem;
+        outline: none;
+        margin-top: 0.25rem;
+        width: 100%;
+      }
+    }
+
+    input::placeholder {
+      margin-left: 2px;
+    }
+    .checked {
+      margin-bottom: 8px;
+    }
+  }
+  button {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    background-color: rgb(106 106 106/1);
+    color: #fff;
+    border: 0;
+    border-radius: 0.25rem;
+  }
+  p {
+    font-size: 16px;
+    font-family: math;
+    margin-top: 8px;
+  }
+}
+.main-formS {
+  form {
+    .mobile-number {
+      margin-bottom: 8px;
+      label {
+        font-size: 16px;
+        font-family: "circular";
+      }
+
+      input {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        border: 1px solid rgb(112 112 112/1);
+        border-radius: 0.25rem;
+        outline: none;
+        margin-top: 0.25rem;
+        width: 100%;
+      }
+    }
+    .password {
+      margin-bottom: 8px;
+      label {
+        font-size: 16px;
+        font-family: "circular";
+      }
+
+      input {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        border: 1px solid rgb(112 112 112/1);
+        border-radius: 0.25rem;
+        outline: none;
+        margin-top: 0.25rem;
+        width: 100%;
+      }
+    }
+
+    input::placeholder {
+      margin-left: 2px;
+    }
+    .checked {
+      margin-bottom: 8px;
+    }
+  }
+  button {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    background-color: rgb(106 106 106/1);
+    color: #fff;
+    border: 0;
+    border-radius: 0.25rem;
+  }
+  p {
+    font-size: 16px;
+    font-family: math;
+    margin-top: 8px;
+  }
+}

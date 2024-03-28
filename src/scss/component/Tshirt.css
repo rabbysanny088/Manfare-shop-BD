@@ -1,0 +1,280 @@
+/* header section */
+header {
+  position: relative;
+  width: 100%;
+}
+header .h-container {
+  position: relative;
+  /* border img */
+}
+@media (max-width: 900px) {
+  header .h-container .h-main {
+    margin-bottom: -12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: #fff;
+    box-shadow: 0 0 #000, 0 0 rgba(0, 0, 0, 0), 0 0 #000, 0 0 rgba(0, 0, 0, 0), 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  }
+}
+@media (max-width: 768px) {
+  header .h-container .h-main {
+    margin-bottom: -12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: #fff;
+    box-shadow: 0 0 #000, 0 0 rgba(0, 0, 0, 0), 0 0 #000, 0 0 rgba(0, 0, 0, 0), 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  }
+}
+@media (max-width: 390px) {
+  header .h-container .h-main {
+    margin-bottom: -12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: #fff;
+    box-shadow: 0 0 #000, 0 0 rgba(0, 0, 0, 0), 0 0 #000, 0 0 rgba(0, 0, 0, 0), 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  }
+}
+header .h-container .navbars {
+  margin-top: 6px;
+}
+header .h-container .navbars .submenu {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+header .h-container .navbars .submenu .dropdown {
+  position: relative;
+}
+header .h-container .navbars .submenu .dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  z-index: 99;
+  margin-top: 0;
+}
+header .h-container .navbars .submenu .dropdown .dropdown-content {
+  background-color: white;
+  padding-left: 10px;
+  padding-top: 13px;
+  padding-bottom: 4px;
+  border-radius: 2px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -999;
+  position: absolute;
+  width: 200px;
+  transition: all ease 0.5s;
+  border: 1px solid #efefee;
+}
+header .h-container .navbars .submenu .dropdown .dropdown-content li {
+  margin-bottom: 12px;
+  border-bottom: 1px dotted;
+  padding-bottom: 9px;
+}
+header .h-container .navbars .submenu .dropdown .dropdown-content li a {
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+header .h-container .navbars .submenu .dropdown .dropdown-content li a:hover {
+  color: #a98153;
+}
+header .h-container .navbars .hideOnMobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  header .h-container .navbars .hideOnMobile {
+    display: none;
+  }
+}
+header .h-container .navbars a {
+  font-weight: 500;
+  color: black;
+  transition: color 0.3s;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+header .h-container .navbars a:hover {
+  color: #a98153;
+}
+@media (max-width: 1400px) {
+  header .h-container .navbars a {
+    font-size: 15px;
+  }
+}
+header .h-container .navbars .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 999;
+  background-color: white;
+  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow-x: hidden;
+  transition: transform 0.5s ease;
+  transform: translateX(-100%);
+  width: 300px;
+}
+header .h-container .navbars .sidebar .close-icon i {
+  font-size: 30px;
+  display: f;
+  display: flex;
+  justify-content: end;
+  margin-right: 10px;
+  margin-top: 6px;
+}
+@media (max-width: 390px) {
+  header .h-container .navbars .sidebar {
+    width: 100%;
+  }
+}
+header .h-container .navbars .sidebar li {
+  width: 100%;
+  margin-bottom: 10px;
+}
+header .h-container .navbars .sidebar a {
+  width: 100%;
+}
+header .h-container .navbars .dropdown-toggle::after {
+  display: none !important;
+}
+header .h-container .seach-input-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .h-container .seach-input-box .icons .menu-button {
+  font-size: 39px !important;
+}
+@media (max-width: 900px) {
+  header .h-container .seach-input-box .icons .menu-button {
+    display: block;
+  }
+}
+header .h-container .seach-input-box input[type=text] {
+  border: none;
+  outline: none;
+  padding-bottom: 5px;
+}
+header .h-container .seach-input-box input[type=text]:focus {
+  border-bottom: 1px solid #efefee;
+}
+header .h-container .seach-input-box input[type=text]::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+header .h-container .seach-input-box input[type=text]::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+header .h-container .seach-input-box svg {
+  width: 22px;
+  margin-left: -22px;
+}
+header .h-container .logo {
+  width: 15%;
+}
+header .h-container .icons {
+  cursor: pointer;
+}
+header .h-container .icons .danger-ball {
+  right: -21px;
+  bottom: -23px;
+  height: 22px;
+  width: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #a98153;
+}
+@media (max-width: 900px) {
+  header .h-container .icons .user-icon i {
+    font-size: 42px;
+    border-left: 1px solid rgb(238, 237, 237);
+    padding: 7px;
+  }
+}
+@media (max-width: 768px) {
+  header .h-container .icons .user-icon i {
+    font-size: 42px;
+    border-left: 1px solid rgb(238, 237, 237);
+    padding: 7px;
+  }
+}
+@media (max-width: 768px) {
+  header .h-container .icons .user-icon i {
+    font-size: 42px;
+    border-left: 1px solid rgb(238, 237, 237);
+    padding: 7px;
+  }
+}
+@media (max-width: 390px) {
+  header .h-container .icons .user-icon i {
+    font-size: 42px;
+    border-left: 1px solid rgb(238, 237, 237);
+    padding: 7px;
+  }
+}
+header .h-container .border-img {
+  width: 100%;
+}
+@media (max-width: 900px) {
+  header .h-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0;
+  }
+}
+@media (max-width: 768px) {
+  header .h-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0;
+  }
+}
+@media (max-width: 768px) {
+  header .h-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0;
+  }
+}
+@media (max-width: 390px) {
+  header .h-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0;
+  }
+}
+@media (max-width: 900px) {
+  header {
+    margin-top: -7px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    margin-top: -7px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    margin-top: -7px;
+  }
+}
+@media (max-width: 390px) {
+  header {
+    margin-top: -7px;
+  }
+}/*# sourceMappingURL=Tshirt.css.map */

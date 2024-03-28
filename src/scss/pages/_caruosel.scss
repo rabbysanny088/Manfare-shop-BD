@@ -1,0 +1,112 @@
+@mixin largescreen {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+@mixin smallScreen {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  .swiper-wrapper {
+    .slide-img {
+      position: relative;
+      img {
+        border-radius: 10px;
+      }
+      .box {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #4a4a4a;
+        background: white;
+        border-radius: 7px;
+        padding: 5px 22px;
+        cursor: pointer;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: all 0.1s;
+        &:hover {
+          background: #977b63;
+          color: white;
+        }
+        @include largescreen() {
+          font-size: 14px;
+        }
+        @include tablet() {
+          font-size: 12px;
+        }
+        @include mobile() {
+          font-size: 8px;
+        }
+      }
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        cursor: pointer;
+      }
+    }
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .prev-button {
+    img {
+      position: absolute;
+      top: 50%;
+      z-index: 99;
+      left: 0;
+      width: 20px;
+    }
+  }
+  .next-button {
+    img {
+      position: absolute;
+      top: 50%;
+      z-index: 99;
+      right: 0;
+      width: 20px;
+    }
+  }
+}
+
+.arrow-buttons {
+  position: relative;
+  margin-bottom: 100px;
+
+  img {
+    width: 20px;
+    cursor: pointer;
+  }
+}
