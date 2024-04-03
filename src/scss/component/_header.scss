@@ -244,6 +244,7 @@ header {
       }
       @include smallScreen() {
         width: 41% !important;
+        margin-bottom: 12px;
       }
     }
 
