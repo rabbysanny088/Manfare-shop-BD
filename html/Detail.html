@@ -3,10 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       rel="icon"
       type="image/svg+xml"
       href="/assets/panjabiImages/manfare logo.jpeg"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
     <!-- bootstrap css link -->
@@ -26,17 +32,25 @@
     />
     <!-- boxicons -->
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
     <script
       src="https://unpkg.com/js-image-zoom@0.4.1/js-image-zoom.js"
       type="application/javascript"
     ></script>
 
     <title>Manfare | Revolutionizing Men's Fashion Since 2017</title>
+
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
   </head>
   <body>
     <header
@@ -98,11 +112,13 @@
 
             <!-- logo -->
             <div class="logo">
-              <img
-                src="/assets/heroImages/logo.png"
-                alt="logo"
-                class="img-fluid"
-              />
+              <a href="/index.html">
+                <img
+                  src="/assets/heroImages/logo.png"
+                  alt="logo"
+                  class="img-fluid"
+                />
+              </a>
             </div>
             <!-- logo -->
 
@@ -593,12 +609,12 @@
 
         <div class="main mt-3 xzoom-container">
           <div class="m">
-            <div class="main-sub-fa">
-              <div class="sub-fashion-images">
-                <div class="video-images">
-                  <div class="video-img"></div>
+            <div class="swiper-width">
+              <div class="swiper mySwiper swipers">
+                <div class="swiper-wrapper swiper-wrappers video-image">
                   <div
-                    class="detail-img sub-images"
+                    class="swiper-slide swiper-slides detail-img"
+                    style="display: block"
                     onclick="chnagePanjabiImage()"
                   >
                     <img
@@ -607,21 +623,22 @@
                       alt=""
                     />
                   </div>
-                </div>
-                <div
-                  class="show-img sub-images mt-xxl-2 mt-xxl-2 mt-lg-2 mt-md-2 mt-sm-0 mt-0"
-                  onclick="chnagePanjabiImage()"
-                >
-                  <img
-                    class="img-fluid"
-                    src="/assets/panjabiImages/panjabi-img-3.jpeg"
-                    alt=""
-                  />
-                </div>
-                <div
-                  class="short-img sub-images mt-xxl-2 mt-xxl-2 mt-lg-2 mt-md-2 mt-sm-0 mt-0"
-                >
-                  <div class="short-img-1" onclick="onChangeSrc()">
+                  <div
+                    class="swiper-slide show-img swiper-slides sub-images"
+                    style="display: block; margin-bottom: 16px"
+                    onclick="chnagePanjabiImage()"
+                  >
+                    <img
+                      class="img-fluid"
+                      src="/assets/panjabiImages/panjabi-img-3.jpeg"
+                      alt=""
+                    />
+                  </div>
+                  <div
+                    class="swiper-slide short-img swiper-slides-1"
+                    style="display: block"
+                    onclick="onChangeSrc()"
+                  >
                     <img
                       class="img-fluid"
                       src="/assets/detailImages/img-1.jpeg"
@@ -629,7 +646,8 @@
                     />
                   </div>
                   <div
-                    class="short-img-2 mt-xxl-2 mt-xxl-2 mt-lg-2 mt-md-2 mt-sm-0 mt-0mt-2"
+                    class="swiper-slide short-img swiper-slides-2"
+                    style="display: block"
                     onclick="onChangeShortPan()"
                   >
                     <img
@@ -638,10 +656,9 @@
                       class="img-fluid"
                     />
                   </div>
-                </div>
-                <div class="fashion-img-main sub-images">
                   <div
-                    class="fashion-img mt-xxl-2 mt-xxl-2 mt-lg-2 mt-md-2 mt-sm-0 mt-0"
+                    class="swiper-slide fashion-img swiper-slides"
+                    style="display: block"
                     onclick="onDesign()"
                   >
                     <img
@@ -650,8 +667,11 @@
                       class="img-fluid"
                     />
                   </div>
+                 
+                  
                   <div
-                    class="box-img mt-xxl-2 mt-xxl-2 mt-lg-2 mt-md-2 mt-sm-0 mt-0"
+                    class="swiper-slide box-img swiper-slides"
+                    style="display: block"
                     onclick="onBoxOpen()"
                   >
                     <img
@@ -660,8 +680,109 @@
                       class="img-fluid"
                     />
                   </div>
+                  <div
+                    class="swiper-slide box-img swiper-slides"
+                    style="display: block"
+                    onclick="onSizes()"
+                  >
+                    <img
+                      src="/assets/detailImages/sizes.jpeg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </div>
                 </div>
-                <!-- <div class="box-img"></div> -->
+
+                <div class="">
+                  <button
+                    type="button"
+                    class="res-icon1 d-xxl-none d-xl-none d-lg-none d-md-block d-sm-block d-block"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      class=""
+                    >
+                      <path
+                        d="M8.90991 19.92L15.4299 13.4C16.1999 12.63 16.1999 11.37 15.4299 10.6L8.90991 4.08"
+                        stroke="#292D32"
+                        stroke-width="1.5"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </button>
+                  <button
+                    class="next-button d-xxl-block d-xl-block d-lg-block d-md-none d-sm-none d-none"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      class="des-icon1"
+                    >
+                      <path
+                        d="M19.9201 8.95L13.4001 15.47C12.6301 16.24 11.3701 16.24 10.6001 15.47L4.08008 8.95"
+                        stroke="#292D32"
+                        stroke-width="1.5"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="">
+                  <button
+                    type="button"
+                    class="res-icon2 d-xxl-none d-xl-none d-lg-none d-md-block d-sm-block d-block"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M15.0001 19.92L8.48009 13.4C7.71009 12.63 7.71009 11.37 8.48009 10.6L15.0001 4.08"
+                        stroke="#292D32"
+                        stroke-width="1.5"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </button>
+                  <button
+                    class="prev-button d-xxl-block d-xl-block d-lg-block d-md-none d-sm-none d-none"
+                    disabled=""
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      class="des-icon"
+                    >
+                      <path
+                        d="M19.9201 15.05L13.4001 8.53C12.6301 7.76 11.3701 7.76 10.6001 8.53L4.08008 15.05"
+                        stroke="#292D32"
+                        stroke-width="1.5"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
             <div class="big-image-main position-relative" id="img-container">
@@ -673,6 +794,7 @@
               />
             </div>
           </div>
+
           <div class="">
             <div class="content-main">
               <div class="content-titles">
@@ -735,7 +857,7 @@
                     value="1"
                   /><span class="cursor-pointer plus">+</span>
                 </div>
-                <div class="btns-coun">
+                <div class="btns-couns">
                   <button class="btn-1" title="Add To Cart">Add To Cart</button
                   ><button class="btn-2">Buy Now</button>
                 </div>
@@ -756,6 +878,7 @@
                   </p>
                 </div>
               </div>
+              
               <div class="contact-img">
                 <img
                   src="https://www.manfarebd.com/_next/static/media/call-us.4b32e317.png"
@@ -848,7 +971,1018 @@
           </div>
         </div>
       </section>
+
+      <!-- descripton -->
+      <section class="mt-5 container">
+        <div class="des_btn_main mb-4">
+          <div class="des-btn1" onclick="showEnText()">
+            <span class="text text1" id="firstText">DESCRIPTION</span>
+            <div class="line active" id="line1"></div>
+          </div>
+          <div class="des-btn-2" onclick="showBanglaText()">
+            <span class="text" id="secondText">DELIVERY OPTIONS</span>
+            <div class="line" id="line2"></div>
+          </div>
+        </div>
+        <div class="des-content">
+          <p><strong>About the Category</strong></p>
+          <p>
+            Celebrate grandeur, color, and festivity with Manfare’s Elite
+            Quality Panjabi. With the rise in contemporary clothing, Manfare has
+            undoubtedly been at the forefront of change. We focus on quality
+            over price, so you can indulge in the comfort and grace of this
+            elegant piece of outfit. Manfare’s Elite Panjabi Collection is a
+            fusion of traditional elements with contemporary design. So, don’t
+            choose between comfort and premium; select from Manfare’s Elite
+            Panjabi.
+          </p>
+          <p>Be the focus of every occasion with Manfare!</p>
+          <p>&nbsp;</p>
+          <p><strong>Product Specifications</strong></p>
+          <p>
+            • Handcuff Style : The designs are perfectly knitted for an
+            outlandish style.
+          </p>
+          <p>
+            • 100% Organic Cotton : Mostly referred to as softer and safer for
+            skin.
+          </p>
+          <p>
+            • Embroidery Thread : The threads are procured from “Well Branded
+            Yarn” for their superior tensile strength.
+          </p>
+          <p>
+            • Premium Snap Button : Perfectly hold the premium quality of the
+            design
+          </p>
+          <p>
+            • Breathable : This type of fabric allows moisture removal from the
+            body and absorbs liquid.
+          </p>
+          <p>
+            • Quality Control : To identify if each Panjabi is up to the Elite
+            Quality Standard.
+          </p>
+          <p>
+            • Unique Design : Inspired by the contemporary traditional elements
+            for distinctive design.
+          </p>
+          <p>&nbsp;</p>
+          <p><strong>About the Brand</strong></p>
+          <p>
+            Manfare has become locally renowned for the classic collection of
+            men’s clothing with a touch and feel of enhanced culture and
+            heritage. As a lifestyle brand MANFARE aims to serve the customers
+            with the quality one deserves. Since 2017, Manfare has been serving
+            the fashion industry with pride and mastered the art of making men’s
+            wardrobe a reflection of their personality.
+          </p>
+          <p>
+            Be a Statement out of the Ordinary! Welcome to the world of Manfare
+            Clothing!
+          </p>
+        </div>
+        <div class="bangla-text">
+          <p class="mt-5" style="font-weight: 300">
+            ঢাকা সিটি -হোম ডেলিভারী -৭০ টাকা <br />
+            ঢাকা সিটি’র ভেতরে অর্থাৎ ঢাকা সিটি কর্পোরেশনের মধ্যে যে এলাকাগুলো
+            রয়েছে সেই এলাকাগুলোতে সম্পূর্ণ ক্যাশ অন ডেলিভারি-তে ড্রেস ডেলিভারি
+            করা হয়। <br />
+            অর্থাৎ একজন ক্রেতা কোন প্রোডাক্ট অর্ডার করার পর প্রোডাক্টটি হাতে
+            পেয়ে ডেলিভারিম্যানের কাছে প্রোডাক্টের মূল্য পরিশোধ করতে পারবেন।
+            <br /><br />ঢাকার বাইরে -সারা বাংলাদেশ- হোম ডেলিভারি অথবা কুরিয়ার
+            ডেলিভেরী -১৫০ টাকা <br />
+            ঢাকার বাইরের অর্ডারের ক্ষেত্রে যে এলাকাসমূহতে কন্ডিশনে কুরিয়ার যায়
+            সেই ক্ষেত্রে শুধুমাত্র ডেলিভারি চার্জ এডভান্স করে অর্ডার করতে হয়।<br />
+            পরবর্তীতে কুরিয়ার থেকে প্রোডাক্ট সংগ্রহের সময় শুধুমাত্র প্রোডাক্টের
+            মূল্য পরিশোধ করে ক্রেতা তার প্রোডাক্টটি সংগ্রহ করতে পারবেন।<br />
+            ঢাকার বাইরে হোম ডেলিভারির সুযোগ সাধারণত থানা সদরগুলোতে পাওয়া যায় ।
+            কুরিয়ারের ডেলিভারির সময় থেকে , হোম ডেলিভারিতে একটু বেশী সময় প্রয়োজন
+            হয়, ৩-৫ দিন<br />
+            ঢাকার বাইরে হোম ডেলিভারির ক্ষেত্রে শুধুমাত্র ডেলিভারি চার্জ টা
+            এডভান্স পেমেন্ট করতে হয় <br />বাকী টাকা ক্যাশ অন ডেলিভারিতে অর্থাৎ
+            প্রোডাক্ট রিসিভ করার সময় ডেলিভারিম্যানের কাছে টাকা দিয়ে প্রোডাক্ট
+            রিসিভ করতে পারবেন।
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="container mt-xl-5 mt-xxl-5 mt-lg-5 mt-sm-2 mt-2"
+        style="position: relative"
+      >
+        <div class="click-button click-btns">
+          <button class="next-btn-3 right-arrow-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="w-4 md:w-5 lg:w-6 h-4 md:h-5 lg:h-6"
+            >
+              <path
+                d="M15.0001 19.92L8.48009 13.4C7.71009 12.63 7.71009 11.37 8.48009 10.6L15.0001 4.08"
+                stroke="#292D32"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+          <button class="prev-btn-3 left-arrow-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="w-4 md:w-5 lg:w-6 h-4 md:h-5 lg:h-6"
+            >
+              <path
+                d="M8.90991 19.92L15.4299 13.4C16.1999 12.63 16.1999 11.37 15.4299 10.6L8.90991 4.08"
+                stroke="#292D32"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="swiper mySwiper9">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="/assets/customerImages/customer-img-1.jpeg"
+                alt=""
+                class="category-img"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/customerImages/customer-img-2.jpeg"
+                alt=""
+                class="category-img"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/customerImages/customer-img-3.jpeg"
+                alt=""
+                class="category-img"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/customerImages/customer-img-4.jpeg"
+                alt=""
+                class="category-img"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/customerImages/customer-img-5.jpeg"
+                alt=""
+                class="category-img"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/customerImages/customer-img-6.jpeg"
+                alt=""
+                class="category-img"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/customerImages/customer-img-7.jpeg"
+                alt=""
+                class="category-img"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/customerImages/customer-img-8.jpeg"
+                alt=""
+                class="category-img"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/customerImages/customer-img-9.jpeg"
+                alt=""
+                class="category-img"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/customerImages/customer-img-10.jpeg"
+                alt=""
+                class="category-img"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/customerImages/customer-img-11.jpeg"
+                alt=""
+                class="category-img"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/customerImages/customer-img-12.jpeg"
+                alt=""
+                class="category-img"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/assets/customerImages/customer-img-13.jpeg"
+                alt=""
+                class="category-img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container mt-4" style="position: relative">
+        <div class="heading mb-5">
+          <div class="title">
+            <h2>RELATED PRODUCTS</h2>
+          </div>
+          <p class="border"></p>
+        </div>
+        <div class="click-buttoned">
+          <button class="left-arrow left-arrow-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="w-4 md:w-5 lg:w-6 h-4 md:h-5 lg:h-6"
+            >
+              <path
+                d="M15.0001 19.92L8.48009 13.4C7.71009 12.63 7.71009 11.37 8.48009 10.6L15.0001 4.08"
+                stroke="#292D32"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+          <button class="right-arrow right-arrow-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="w-4 md:w-5 lg:w-6 h-4 md:h-5 lg:h-6"
+            >
+              <path
+                d="M8.90991 19.92L15.4299 13.4C16.1999 12.63 16.1999 11.37 15.4299 10.6L8.90991 4.08"
+                stroke="#292D32"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="swiper mySwiper3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card" style="width: 20rem">
+                <a href="/html/Detail.html">
+                <img
+                  src="/assets/productImages/product-img-1.jpeg"
+                  alt=""
+                  class="category-img"
+                />
+                </a>
+                <p class="sm-box">
+                  <span>0.0</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke=""
+                    fill="#FCB400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+                    ></path>
+                  </svg>
+                  <span>| 00</span>
+                </p>
+                <div class="card-content">
+                  <p class="card-titles">
+                    <span
+                      class="title1 d-none d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block"
+                    >
+                      ELITE Quality Embroidered Panjabi....
+                    </span>
+                    <span
+                      class="title1 d-none d-sm-block d-md-none d-lg-block d-xl-block d-xxl-none"
+                    >
+                      ELITE Quality Embroidered Panjabi...
+                    </span>
+                    <span
+                      class="title1 res-title d-none d-sm-none d-md-block d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality Embroidered...
+                    </span>
+
+                    <span
+                      class="title1 res-title d-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality...
+                    </span>
+                  </p>
+                  <p class="money-text lg-m-2">
+                    Tk.2990 <sub class="through">Tk.3200</sub>
+                  </p>
+                  <button type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" style="width: 20rem">
+                <a href="/html/Detail.html">
+                <img
+                  src="/assets/sel-Pro-images/sel-product-img-2.jpeg"
+                  alt=""
+                  class="category-img"
+                />
+                <p class="sm-box">
+                  <span>0.0</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke=""
+                    fill="#FCB400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+                    ></path>
+                  </svg>
+                  <span>| 00</span>
+                </p>
+                <div class="card-content">
+                  </a>
+                  <p class="card-titles">
+                    <span
+                      class="title1 d-none d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block"
+                    >
+                      ELITE Quality Embroidered Panjabi....
+                    </span>
+                    <span
+                      class="title1 d-none d-sm-block d-md-none d-lg-block d-xl-block d-xxl-none"
+                    >
+                      ELITE Quality Embroidered Panjabi...
+                    </span>
+                    <span
+                      class="title1 res-title d-none d-sm-none d-md-block d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality Embroidered...
+                    </span>
+
+                    <span
+                      class="title1 res-title d-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality...
+                    </span>
+                  </p>
+                  <p class="money-text lg-m-2">
+                    Tk.2990 <sub class="through">Tk.3200</sub>
+                  </p>
+                  <button type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" style="width: 20rem">
+                <a href="/html/Detail.html">
+                <img
+                  src="/assets/sel-Pro-images/sel-product-img-3.jpeg"
+                  alt=""
+                  class="category-img"
+                />
+                <p class="sm-box">
+                  <span>0.0</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke=""
+                    fill="#FCB400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+                    ></path>
+                  </svg>
+                  <span>| 00</span>
+                </p>
+                <div class="card-content">
+                  </a>
+                  <p class="card-titles">
+                    <span
+                      class="title1 d-none d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block"
+                    >
+                      ELITE Quality Embroidered Panjabi....
+                    </span>
+                    <span
+                      class="title1 d-none d-sm-block d-md-none d-lg-block d-xl-block d-xxl-none"
+                    >
+                      ELITE Quality Embroidered Panjabi...
+                    </span>
+                    <span
+                      class="title1 res-title d-none d-sm-none d-md-block d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality Embroidered...
+                    </span>
+
+                    <span
+                      class="title1 res-title d-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality...
+                    </span>
+                  </p>
+                  <p class="money-text lg-m-2">
+                    Tk.2990 <sub class="through">Tk.3200</sub>
+                  </p>
+                  <button type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" style="width: 20rem">
+                <a href="/html/Detail.html">
+                <img
+                  src="/assets/sel-Pro-images/sel-product-img-4.jpeg"
+                  alt=""
+                  class="category-img"
+                />
+                <p class="sm-box">
+                  <span>0.0</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke=""
+                    fill="#FCB400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+                    ></path>
+                  </svg>
+                  <span>| 00</span>
+                </p>
+                <div class="card-content">
+                  </a>
+                  <p class="card-titles">
+                    <span
+                      class="title1 d-none d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block"
+                    >
+                      ELITE Quality Embroidered Panjabi....
+                    </span>
+                    <span
+                      class="title1 d-none d-sm-block d-md-none d-lg-block d-xl-block d-xxl-none"
+                    >
+                      ELITE Quality Embroidered Panjabi...
+                    </span>
+                    <span
+                      class="title1 res-title d-none d-sm-none d-md-block d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality Embroidered...
+                    </span>
+
+                    <span
+                      class="title1 res-title d-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality...
+                    </span>
+                  </p>
+                  <p class="money-text lg-m-2">
+                    Tk.2990 <sub class="through">Tk.3200</sub>
+                  </p>
+                  <button type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" style="width: 20rem">
+                <a href="/html/Detail.html">
+                <img
+                  src="/assets/sel-Pro-images/sel-product-img-5.jpeg"
+                  alt=""
+                  class="category-img"
+                />
+                <p class="sm-box">
+                  <span>0.0</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke=""
+                    fill="#FCB400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+                    ></path>
+                  </svg>
+                  <span>| 00</span>
+                </p>
+                <div class="card-content">
+                  </a>
+                  <p class="card-titles">
+                    <span
+                      class="title1 d-none d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block"
+                    >
+                      ELITE Quality Embroidered Panjabi....
+                    </span>
+                    <span
+                      class="title1 d-none d-sm-block d-md-none d-lg-block d-xl-block d-xxl-none"
+                    >
+                      ELITE Quality Embroidered Panjabi...
+                    </span>
+                    <span
+                      class="title1 res-title d-none d-sm-none d-md-block d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality Embroidered...
+                    </span>
+
+                    <span
+                      class="title1 res-title d-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality...
+                    </span>
+                  </p>
+                  <p class="money-text lg-m-2">
+                    Tk.2990 <sub class="through">Tk.3200</sub>
+                  </p>
+                  <button type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" style="width: 20rem">
+                <a href="/html/Detail.html">
+                <img
+                  src="/assets/sel-Pro-images/sel-product-img-6.jpeg"
+                  alt=""
+                  class="category-img"
+                />
+                <p class="sm-box">
+                  <span>0.0</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke=""
+                    fill="#FCB400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+                    ></path>
+                  </svg>
+                  <span>| 00</span>
+                </p>
+                <div class="card-content">
+                  </a>
+                  <p class="card-titles">
+                    <span
+                      class="title1 d-none d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block"
+                    >
+                      ELITE Quality Embroidered Panjabi....
+                    </span>
+                    <span
+                      class="title1 d-none d-sm-block d-md-none d-lg-block d-xl-block d-xxl-none"
+                    >
+                      ELITE Quality Embroidered Panjabi...
+                    </span>
+                    <span
+                      class="title1 res-title d-none d-sm-none d-md-block d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality Embroidered...
+                    </span>
+
+                    <span
+                      class="title1 res-title d-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality...
+                    </span>
+                  </p>
+                  <p class="money-text lg-m-2">
+                    Tk.2990 <sub class="through">Tk.3200</sub>
+                  </p>
+                  <button type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" style="width: 20rem">
+                <a href="/html/Detail.html">
+                <img
+                  src="/assets/sel-Pro-images/sel-product-img-7.jpeg"
+                  alt=""
+                  class="category-img"
+                />
+                <p class="sm-box">
+                  <span>0.0</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke=""
+                    fill="#FCB400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+                    ></path>
+                  </svg>
+                  <span>| 00</span>
+                </p>
+                <div class="card-content">
+                  </a>
+                  <p class="card-titles">
+                    <span
+                      class="title1 d-none d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block"
+                    >
+                      ELITE Quality Embroidered Panjabi....
+                    </span>
+                    <span
+                      class="title1 d-none d-sm-block d-md-none d-lg-block d-xl-block d-xxl-none"
+                    >
+                      ELITE Quality Embroidered Panjabi...
+                    </span>
+                    <span
+                      class="title1 res-title d-none d-sm-none d-md-block d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality Embroidered...
+                    </span>
+
+                    <span
+                      class="title1 res-title d-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality...
+                    </span>
+                  </p>
+                  <p class="money-text lg-m-2">
+                    Tk.2990 <sub class="through">Tk.3200</sub>
+                  </p>
+                  <button type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" style="width: 20rem">
+                <a href="/html/Detail.html">
+                <img
+                  src="/assets/sel-Pro-images/sel-product-img-8.jpeg"
+                  alt=""
+                  class="category-img"
+                />
+                <p class="sm-box">
+                  <span>0.0</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke=""
+                    fill="#FCB400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+                    ></path>
+                  </svg>
+                  <span>| 00</span>
+                </p>
+                <div class="card-content">
+                  </a>
+                  <p class="card-titles">
+                    <span
+                      class="title1 d-none d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block"
+                    >
+                      ELITE Quality Embroidered Panjabi....
+                    </span>
+                    <span
+                      class="title1 d-none d-sm-block d-md-none d-lg-block d-xl-block d-xxl-none"
+                    >
+                      ELITE Quality Embroidered Panjabi...
+                    </span>
+                    <span
+                      class="title1 res-title d-none d-sm-none d-md-block d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality Embroidered...
+                    </span>
+
+                    <span
+                      class="title1 res-title d-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality...
+                    </span>
+                  </p>
+                  <p class="money-text lg-m-2">
+                    Tk.2990 <sub class="through">Tk.3200</sub>
+                  </p>
+                  <button type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" style="width: 20rem">
+                <a href="/html/Detail.html">
+                <img
+                  src="/assets/sel-Pro-images/sel-product-img-9.jpeg"
+                  alt=""
+                  class="category-img"
+                />
+                <p class="sm-box">
+                  <span>0.0</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke=""
+                    fill="#FCB400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+                    ></path>
+                  </svg>
+                  <span>| 00</span>
+                </p>
+                <div class="card-content">
+                  </a>
+                  <p class="card-titles">
+                    <span
+                      class="title1 d-none d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block"
+                    >
+                      ELITE Quality Embroidered Panjabi....
+                    </span>
+                    <span
+                      class="title1 d-none d-sm-block d-md-none d-lg-block d-xl-block d-xxl-none"
+                    >
+                      ELITE Quality Embroidered Panjabi...
+                    </span>
+                    <span
+                      class="title1 res-title d-none d-sm-none d-md-block d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality Embroidered...
+                    </span>
+
+                    <span
+                      class="title1 res-title d-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality...
+                    </span>
+                  </p>
+                  <p class="money-text lg-m-2">
+                    Tk.2990 <sub class="through">Tk.3200</sub>
+                  </p>
+                  <button type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" style="width: 20rem">
+                <a href="/html/Detail.html">
+                <img
+                  src="/assets/sel-Pro-images/sel-product-img-10.jpeg"
+                  alt=""
+                  class="category-img"
+                />
+                <p class="sm-box">
+                  <span>0.0</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke=""
+                    fill="#FCB400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+                    ></path>
+                  </svg>
+                  <span>| 00</span>
+                </p>
+                <div class="card-content">
+                  </a>
+                  <p class="card-titles">
+                    <span
+                      class="title1 d-none d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block"
+                    >
+                      ELITE Quality Embroidered Panjabi....
+                    </span>
+                    <span
+                      class="title1 d-none d-sm-block d-md-none d-lg-block d-xl-block d-xxl-none"
+                    >
+                      ELITE Quality Embroidered Panjabi...
+                    </span>
+                    <span
+                      class="title1 res-title d-none d-sm-none d-md-block d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality Embroidered...
+                    </span>
+
+                    <span
+                      class="title1 res-title d-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none"
+                    >
+                      ELITE Quality...
+                    </span>
+                  </p>
+                  <p class="money-text lg-m-2">
+                    Tk.2990 <sub class="through">Tk.3200</sub>
+                  </p>
+                  <button type="button" class="card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="mt-xl-5 mt-xxl-5 mt-lg-5 mt-sm-2 mt-2 footer">
+      <div class="container pt-5 pb-5">
+        <div class="row mb-5">
+          <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+            <div class="manfare-content">
+              <img
+                class="img-fluid"
+                src="/assets/footerImages/footer-img-1.png"
+                alt=""
+                style="width: 67%"
+              />
+              <p class="phone-num">+880 9606999695</p>
+              <p class="manfare-text">Worktime: SAT - FRI, 10AM - 11PM</p>
+              <div class="social-icons">
+                <span>
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    style="color: #b89579; size: 1.3em"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"
+                    ></path>
+                  </svg>
+                </span>
+                <span>
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 1024 1024"
+                    style="color: #b89579; size: 1.3em"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M512 306.9c-113.5 0-205.1 91.6-205.1 205.1S398.5 717.1 512 717.1 717.1 625.5 717.1 512 625.5 306.9 512 306.9zm0 338.4c-73.4 0-133.3-59.9-133.3-133.3S438.6 378.7 512 378.7 645.3 438.6 645.3 512 585.4 645.3 512 645.3zm213.5-394.6c-26.5 0-47.9 21.4-47.9 47.9s21.4 47.9 47.9 47.9 47.9-21.3 47.9-47.9a47.84 47.84 0 0 0-47.9-47.9zM911.8 512c0-55.2.5-109.9-2.6-165-3.1-64-17.7-120.8-64.5-167.6-46.9-46.9-103.6-61.4-167.6-64.5-55.2-3.1-109.9-2.6-165-2.6-55.2 0-109.9-.5-165 2.6-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6 46.9 46.9 103.6 61.4 167.6 64.5 55.2 3.1 109.9 2.6 165 2.6 55.2 0 109.9.5 165-2.6 64-3.1 120.8-17.7 167.6-64.5 46.9-46.9 61.4-103.6 64.5-167.6 3.2-55.1 2.6-109.8 2.6-165zm-88 235.8c-7.3 18.2-16.1 31.8-30.2 45.8-14.1 14.1-27.6 22.9-45.8 30.2C695.2 844.7 570.3 840 512 840c-58.3 0-183.3 4.7-235.9-16.1-18.2-7.3-31.8-16.1-45.8-30.2-14.1-14.1-22.9-27.6-30.2-45.8C179.3 695.2 184 570.3 184 512c0-58.3-4.7-183.3 16.1-235.9 7.3-18.2 16.1-31.8 30.2-45.8s27.6-22.9 45.8-30.2C328.7 179.3 453.7 184 512 184s183.3-4.7 235.9 16.1c18.2 7.3 31.8 16.1 45.8 30.2 14.1 14.1 22.9 27.6 30.2 45.8C844.7 328.7 840 453.7 840 512c0 58.3 4.7 183.2-16.2 235.8z"
+                    ></path>
+                  </svg>
+                </span>
+                <span>
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 16 16"
+                    style="color: #b89579; size: 1.3em"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                    ></path>
+                  </svg>
+                </span>
+
+                <span>
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 32 32"
+                    style="color: #b89579; size: 1.3em"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M 16 4 C 9.410156 4 4 9.136719 4 15.5 C 4 18.890625 5.570313 21.902344 8 24 L 8 28.625 L 12.4375 26.40625 C 13.566406 26.746094 14.746094 27 16 27 C 22.589844 27 28 21.863281 28 15.5 C 28 9.136719 22.589844 4 16 4 Z M 16 6 C 21.558594 6 26 10.265625 26 15.5 C 26 20.734375 21.558594 25 16 25 C 14.804688 25 13.664063 24.773438 12.59375 24.40625 L 12.1875 24.28125 L 10 25.375 L 10 23.125 L 9.625 22.8125 C 7.40625 21.0625 6 18.441406 6 15.5 C 6 10.265625 10.441406 6 16 6 Z M 14.875 12.34375 L 8.84375 18.71875 L 14.25 15.71875 L 17.125 18.8125 L 23.09375 12.34375 L 17.8125 15.3125 Z"
+                    ></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+            <h4 class="manfare-sm-text">Information</h4>
+          </div>
+          <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+            <h4 class="manfare-sm-text">CONTACT INFO</h4>
+            <ul class="contact-list">
+              <li>
+                Bashundhara City Shopping Complex, <br />
+                Level-3, Block-D, Shop 45, 46, <br />Panthapath, Dhaka.
+              </li>
+              <li>manfarebd@gmail.com</li>
+              <li>
+                09606999695 | 01948-898198 <br />
+                01730-642262 | 01845-813237
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-lg-3 col-md-12 col-sm-12 col-12 d-none d-sm-none d-md-none d-lg-block"
+          >
+            <iframe
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmanfareltd&amp;tabs&amp;width=500&amp;height=400&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=233929552127013"
+              width="100%"
+              height="195"
+              style="border: none; overflow: hidden"
+              scrolling="no"
+              frameborder="0"
+              allowfullscreen=""
+              data-show-facepile="true"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
+          </div>
+        </div>
+        <div class="cards-images">
+          <img
+            src="/assets/footerImages/footer-img-2.png"
+            class="img-fluid d-lg-block d-md-none d-sm-none d-none"
+            alt=""
+          />
+          <img
+            src="/assets/footerImages/footer-res-img.png"
+            class="img-fluid d-lg-none d-md-block d-sm-block d-block"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- menubar -->
+    </footer>
 
     <!-- bootstrap -->
     <script
@@ -858,8 +1992,12 @@
     ></script>
     <!-- bootstrap -->
 
-    <script type="module" src="/main.js"></script>
-    <script src="/src/js/detail.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script type="module" src="/main.js"></script>
+    <script src="/src/index.js"></script>
+    <script src="/src/js/detail.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="/src/js/content.js"></script>
   </body>
 </html>

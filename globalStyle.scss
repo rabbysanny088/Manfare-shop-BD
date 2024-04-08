@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "Bahnschrift", sans-serif;
   list-style: none;
-  font-weight: 400 !important;
+  // font-weight: 400 !important;
   // text-decoration: none !important;
 }
 
@@ -118,7 +118,7 @@ body {
   overflow-x: hidden;
   transition: transform 0.5s ease;
   transform: translateX(100%);
-  width: 300px;
+  max-width: 450px;
   border-start-start-radius: 1rem;
   border-end-start-radius: 1rem;
   .wish-list-content {
@@ -150,7 +150,6 @@ body {
     }
   }
   .main-content {
-    height: 80vh;
     p {
       width: 100%;
       border-radius: 0.5rem;
@@ -231,7 +230,7 @@ body {
   overflow-x: hidden;
   transition: transform 0.5s ease;
   transform: translateX(100%);
-  width: 300px;
+  max-width: 430px;
   border-start-start-radius: 1rem;
   border-end-start-radius: 1rem;
 
@@ -265,7 +264,6 @@ body {
     }
   }
   .main-content {
-    height: 80vh;
     p {
       width: 100%;
       border-radius: 0.5rem;
@@ -438,3 +436,81 @@ body {
 // resinput
 
 /* global style */
+
+.all-contnet {
+  height: 80vh;
+  .main-content {
+    .main-cards-con {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 3px solid rgb(243, 243, 243);
+      margin-bottom: 20px;
+      .count-icon {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-left: 14px;
+        span {
+          color: rgb(124, 124, 124);
+          border: none;
+          background: transparent;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+        }
+      }
+
+      .count-contents {
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+        gap: 11px;
+        img {
+          width: 5rem;
+        }
+
+        .titles {
+          h3 {
+            font-size: 14px;
+            font-family: Bahnschrift, sans-serif;
+            color: rgb(129 129 129/1);
+            margin: 0;
+            padding: 0;
+            margin-bottom: 3px;
+          }
+          .content-p {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: rgb(87 87 87/1);
+            font-family: Bahnschrift, sans-serif;
+            text-align: left;
+            padding: 0;
+            margin: 0;
+            @include smallScreen() {
+              font-size: 0.875rem;
+              line-height: 1.25rem;
+            }
+          }
+          span {
+            color: rgb(87 87 87/1);
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+          }
+        }
+        .close-con-icon {
+          button {
+            color: rgb(180, 0, 0);
+            border: none;
+            background-color: transparent;
+            margin-right: 21px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}

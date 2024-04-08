@@ -10,7 +10,7 @@ const XlSize = document.querySelector(".Xl");
 const XxlSize = document.querySelector(".Xxl");
 
 var options = {
-  width: 630,
+  width: 575,
   zoomWidth: 500,
   offset: { vertical: 0, horizontal: 10 },
 };
@@ -41,6 +41,12 @@ function onChangeShortPan() {
 function onDesign() {
   let imgSrc = document.getElementById("imgSrc");
   imgSrc.src = "/assets/detailImages/img-3.jpeg";
+  new ImageZoom(zoom, options);
+}
+
+function onSizes() {
+  let imgSrc = document.getElementById("imgSrc");
+  imgSrc.src = "/assets/detailImages/sizes.jpeg";
   new ImageZoom(zoom, options);
 }
 
@@ -115,3 +121,47 @@ MSize.addEventListener("click", () => setSelectedSize("M"));
 lSize.addEventListener("click", () => setSelectedSize("L"));
 XlSize.addEventListener("click", () => setSelectedSize("Xl"));
 XxlSize.addEventListener("click", () => setSelectedSize("Xxl"));
+
+function border(element, textElement) {
+  element.classList.add("active");
+  textElement.classList.add("text1"); // Change text color to red
+}
+
+function removeBorder(element, textElement) {
+  element.classList.remove("active");
+  textElement.classList.remove("text1"); // Remove red text color
+}
+
+function showEnText() {
+  let enText = document.querySelector(".des-content");
+  let banglaText = document.querySelector(".bangla-text");
+  let line = document.querySelector(".des-btn1 .line");
+  let text = document.querySelector(".des-btn1 .text");
+
+  enText.style.display = "block";
+  banglaText.style.display = "none";
+
+  removeBorder(
+    document.querySelector(".des-btn-2 .line"),
+    document.querySelector(".des-btn-2 .text")
+  );
+
+  border(line, text);
+}
+
+function showBanglaText() {
+  let enText = document.querySelector(".des-content");
+  let banglaText = document.querySelector(".bangla-text");
+  let line = document.querySelector(".des-btn-2 .line");
+  let text = document.querySelector(".des-btn-2 .text");
+
+  enText.style.display = "none";
+  banglaText.style.display = "block";
+
+  removeBorder(
+    document.querySelector(".des-btn1 .line"),
+    document.querySelector(".des-btn1 .text")
+  );
+
+  border(line, text);
+}

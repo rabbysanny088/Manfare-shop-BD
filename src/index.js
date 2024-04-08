@@ -284,44 +284,45 @@ var swiper = new Swiper(".mySwiper9", {
   },
 });
 
-const zooms = document.querySelector("#img-containers");
+const zooms = document.querySelector("#img-container");
 
 var options = {
-  width: 400,
+  width: 575,
   zoomWidth: 500,
   offset: { vertical: 0, horizontal: 10 },
 };
 
+function chnagePanjabiImage() {
+  let imgSrc = document.getElementById("imgSrc");
+  imgSrc.src = "/assets/panjabiImages/panjabi-img-3.jpeg";
+  new ImageZoom(zoom, options);
+}
 function changePanjabiImage() {
   let imgSrc = document.getElementById("imgSrc");
   imgSrc.src = "/assets/panjabiImages/panjabi-img-3.jpeg";
-  new ImageZoom(zooms, options);
+  new ImageZoom(zoom, options);
 }
 
 function onChangeSrc() {
   let imgSrc = document.getElementById("imgSrc");
-  imgSrc.src =
-    "https://cdn.bitcommerz.com/manfare-bd/media/1708861839400-manfare_bd-id-13.jpeg";
-  new ImageZoom(zooms, options);
+  imgSrc.src = "/assets/detailImages/img-1.jpeg";
+  new ImageZoom(zoom, options);
 }
 
 function onChangeShortPan() {
   let imgSrc = document.getElementById("imgSrc");
-  imgSrc.src =
-    "https://cdn.bitcommerz.com/manfare-bd/media/1708861835761-manfare_bd-id-13.jpeg";
-  new ImageZoom(zooms, options);
+  imgSrc.src = "/assets/detailImages/img-2.jpeg";
+  new ImageZoom(zoom, options);
 }
 
 function onDesign() {
   let imgSrc = document.getElementById("imgSrc");
-  imgSrc.src =
-    "https://cdn.bitcommerz.com/manfare-bd/media/1708990780529-manfare_bd-id-13.jpeg";
-  new ImageZoom(zooms, options);
+  imgSrc.src = "/assets/detailImages/img-3.jpeg";
+  new ImageZoom(zoom, options);
 }
 
 function onBoxOpen() {
   let imgSrc = document.getElementById("imgSrc");
-  imgSrc.src =
-    "https://cdn.bitcommerz.com/manfare-bd/media/1709045563417-manfare_bd-id-13.jpeg";
-  new ImageZoom(zooms, options);
+  imgSrc.src = "/assets/detailImages/img-4.jpeg";
+  new ImageZoom(zoom, options);
 }
