@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/panjabiImages/manfare logo.jpeg "
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap css link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- bootstrap css link -->
+
+    <!-- boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- boxicons -->
+
+    <!-- swiper js css link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- swiper js link -->
+
+    <!-- zoom js link -->
+    <script
+      src="https://unpkg.com/js-image-zoom@0.4.1/js-image-zoom.js"
+      type="application/javascript"
+    ></script>
+    <!-- zoom js link -->
+    <link rel="stylesheet" href="view.css" />
+    <title>Manfare | Revolutionizing Men's Fashion Since 2017</title>
+  </head>
+
+  <body>
+    <header
+      class="mt-xxl-5 mt-xl-5 mt-lg-5 mt-md-0 mt-sm-0 mt-0 mb-xxl-2 mb-xl-2 mb-lg-3 mb-md-3 mb-sm-4 mb-4"
+    >
+      <div class="container h-container">
+        <div
+          class="d-flex justify-content-between align-items-center d-md-flex d-md-justify-content-between d-md-align-items-center h-main"
+        >
+          <!-- input box -->
+          <div
+            class="d-flex align-items-center justify-content-between d-md-justify-content-between d-md-align-items-center mb-xxl-2 mb-xl-2 mb-lg-0 mb-md-0 mb-sm-0 mb-0"
+          >
+            <div class="seach-input-box">
+              <div
+                class="input-box align-items-center d-xxl-block d-xl-block d-lg-block d-md-none d-sm-none d-none"
+              >
+                <input
+                  type="text"
+                  placeholder="Search for products..."
+                  id="searchInput"
+                  class=""
+                />
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#818181"
+                  class="w-5 h-5 ms-1"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                  ></path>
+                </svg>
+              </div>
+
+              <div class="icons">
+                <li
+                  onclick="showSidebar()"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  <i
+                    class="bx bx-menu d-sm-block d-md-block d-lg-none menu-icon"
+                    id="menu-icon"
+                  ></i>
+                </li>
+              </div>
+            </div>
+
+            <!-- input box -->
+
+            <!-- logo -->
+            <div class="logo">
+              <a href="/index.html">
+                <img
+                  src="/assets/heroImages/logo.png"
+                  alt="logo"
+                  class="img-fluid"
+                />
+              </a>
+            </div>
+            <!-- logo -->
+
+            <!-- icons -->
+            <div
+              class="icons d-flex justify-content-start align-items-center gap-4"
+            >
+              <div class="phone-icon d-sm-none d-md-none d-lg-block">
+                <img
+                  src="/assets/headerIcons/phone-icon.png"
+                  alt=""
+                  class="img-fluid d-xxl-block d-xl-block d-lg-block d-md-none d-sm-none d-none"
+                />
+              </div>
+              <div
+                class="love-icon position-relative d-xxl-block d-xl-block d-lg-block d-md-none d-sm-none d-none"
+                onclick="showWish()"
+              >
+                <img
+                  src="/assets/headerIcons/love-icon.png"
+                  alt=""
+                  class="img-fluid"
+                />
+
+                <span
+                  class="position-absolute translate-middle p-2 rounded-circle text-white danger-ball"
+                >
+                  0
+                </span>
+              </div>
+              <div
+                class="user-icons"
+                data-bs-toggle="modal" data-bs-target="#exampleModal"
+              >
+                <img
+                  src="/assets/headerIcons/user-icon.png"
+                  class="d-xxl-block d-xl-block d-lg-block d-md-none d-sm-none d-none"
+                  alt=""
+                />
+                <i
+                  class="bx bx-user d-xxl-none d-xl-none d-lg-none d-md-block d-sm-block d-block"
+                ></i>
+              </div>
+            </div>
+            <!-- icons -->
+          </div>
+        </div>
+        <!-- Wish List Items -->
+        <div class="wish-list">
+          <div class="wish-list-content">
+            <div class="wish-title">
+              <p>Wish List Items</p>
+            </div>
+            <div class="wish-btn">
+              <button type="button" onclick="closeWish()">Close</button>
+            </div>
+          </div>
+          <div class="all-contnet">
+            <!-- one -->
+            <div class="main-content">
+              <div class="main-cards-con">
+                <div class="count-icon">
+                  <span>
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      class="global-class-name"
+                      height="0.8em"
+                      width="0.8em"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="color: rgb(124, 124, 124)"
+                    >
+                      <path
+                        d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span class="text-[#4E4E4E]">1</span>
+                  <span fdprocessedid="5ald1e">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      class="global-class-name"
+                      height="0.8em"
+                      width="0.8em"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="color: rgb(124, 124, 124)"
+                    >
+                      <path
+                        d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
+                      ></path>
+                    </svg>
+                  </span>
+                </div>
+                <div class="count-contents">
+                  <img
+                    class="img-fluid"
+                    src="/assets/panjabiImages/panjabi-img-3.jpeg"
+                    alt=""
+                  />
+                  <div class="titles">
+                    <h3>ELITE Quality Embroidered Panjabi I MP-149</h3>
+                    <p class="content-p">
+                      TK. 2990
+                      <sub style="text-decoration: line-through">TK. 3200 </sub>
+                    </p>
+                    <span>Sizes: XL</span>
+                  </div>
+                  <div class="close-con-icon">
+                    <button>X</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- one -->
+
+            <!-- two -->
+            <div class="main-content">
+              <div class="main-cards-con">
+                <div class="count-icon">
+                  <span>
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      class="global-class-name"
+                      height="0.8em"
+                      width="0.8em"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="color: rgb(124, 124, 124)"
+                    >
+                      <path
+                        d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span class="text-[#4E4E4E]">1</span>
+                  <span fdprocessedid="5ald1e">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      class="global-class-name"
+                      height="0.8em"
+                      width="0.8em"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="color: rgb(124, 124, 124)"
+                    >
+                      <path
+                        d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
+                      ></path>
+                    </svg>
+                  </span>
+                </div>
+                <div class="count-contents">
+                  <img
+                    class="img-fluid"
+                    src="/assets/panjabiImages/panjabi-img-5.jpeg"
+                    alt=""
+                  />
+                  <div class="titles">
+                    <h3>ELITE Quality Embroidered Panjabi I MP-149</h3>
+                    <p class="content-p">
+                      TK. 2990
+                      <sub style="text-decoration: line-through">TK. 3200 </sub>
+                    </p>
+                    <span>Sizes: XL</span>
+                  </div>
+                  <div class="close-con-icon">
+                    <button>X</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- two -->
+
+            <!-- three -->
+            <div class="main-content">
+              <div class="main-cards-con">
+                <div class="count-icon">
+                  <span>
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      class="global-class-name"
+                      height="0.8em"
+                      width="0.8em"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="color: rgb(124, 124, 124)"
+                    >
+                      <path
+                        d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span class="text-[#4E4E4E]">1</span>
+                  <span fdprocessedid="5ald1e">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      class="global-class-name"
+                      height="0.8em"
+                      width="0.8em"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="color: rgb(124, 124, 124)"
+                    >
+                      <path
+                        d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
+                      ></path>
+                    </svg>
+                  </span>
+                </div>
+                <div class="count-contents">
+                  <img
+                    class="img-fluid"
+                    src="/assets/panjabiImages/panjabi-img-4.jpeg"
+                    alt=""
+                  />
+                  <div class="titles">
+                    <h3>ELITE Quality Embroidered Panjabi I MP-149</h3>
+                    <p class="content-p">
+                      TK. 2990
+                      <sub style="text-decoration: line-through">TK. 3200 </sub>
+                    </p>
+                    <span>Sizes: XL</span>
+                  </div>
+                  <div class="close-con-icon">
+                    <button>X</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- three -->
+          </div>
+        </div>
+        <!-- Wish List Items -->
+        <div class="img-border">
+          <img
+            class="img-fluid"
+            src="/assets/headerIcons/border.png"
+            alt=""
+            style="
+              box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+                0 2px 4px -2px rgb(0 0 0 / 0.1);
+            "
+          />
+        </div>
+
+        <nav class="navbars">
+          <!-- responsive menubar -->
+          <ul class="sidebar">
+            <li onclick="closeSidebar()">
+              <span href="#" class="close-icon">
+                <i class="bx bx-x"></i>
+              </span>
+            </li>
+            <li><a href="/index.html">Home</a></li>
+            <li>
+              <a href="/category_pages/panjabi.html">Panjabi</a>
+            </li>
+            <li>
+              <div class="res-menu">
+                <a
+                  class="nav-links dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="tshirtDropdownLink"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  T-shirt
+                  <i class="bx bx-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="tshirtDropdownLink">
+                  <li>
+                    <a class="dropdown-item" href="/category_pages/panjabi.html"
+                      >Designer Edition T-Shirt</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/category_pages/panjabi.html"
+                      >Sports T-Shirt</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/category_pages/panjabi.html"
+                      >Solid T-Shirt</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/category_pages/panjabi.html"
+                      >Graphics T-Shirt</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="res-menu">
+                <a
+                  class="nav-links dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="tshirtDropdownLink"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Shirt
+                  <i class="bx bx-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="tshirtDropdownLink">
+                  <li>
+                    <a class="dropdown-item" href="/category_pages/panjabi.html"
+                      >Denim Shirt</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/category_pages/panjabi.html"
+                      >Casual Print Shirt</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/category_pages/panjabi.html"
+                      >Solid T-Shirt</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="/category_pages/panjabi.html">Summer Tracksut Combo</a>
+            </li>
+            <li><a href="/category_pages/panjabi.html">Polo Shirt</a></li>
+            <li><a href="/category_pages/panjabi.html">Boxer</a></li>
+            <li>
+              <a href="/category_pages/panjabi.html">
+                <div class="res-menu">
+                  <a
+                    class="nav-links dropdown-toggle"
+                    href="#"
+                    role="button"
+                    id="tshirtDropdownLink"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Winter
+                    <i class="bx bx-chevron-down"></i>
+                  </a>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="tshirtDropdownLink"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/category_pages/panjabi.html"
+                        >Long Sleeve T-Shirt</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/category_pages/panjabi.html"
+                        >Sweatshirt</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/category_pages/panjabi.html"
+                        >Hoodie</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="html/joggers.html"
+                        >Joggers</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li><a href="/category_pages/panjabi.html">Shoe</a></li>
+            <li><a href="/category_pages/panjabi.html">Trouser</a></li>
+            <li>
+              <a href="/category_pages/panjabi.html">
+                <div class="res-menu">
+                  <a
+                    class="nav-links dropdown-toggle"
+                    href="/category_pages/panjabi.html"
+                    role="button"
+                    id="tshirtDropdownLink"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Accesories
+                    <i class="bx bx-chevron-down"></i>
+                  </a>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="tshirtDropdownLink"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/category_pages/panjabi.html"
+                        >Belt</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/category_pages/panjabi.html"
+                        >Wallet</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="/category_pages/panjabi.html"
+                        >Fashion Mask</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <!-- responsive menubar -->
+
+          <!-- desktop menubar -->
+          <ul class="submenu">
+            <li class="hideOnMobile d-md-none d-sm-none d-lg-block">
+              <a href="/index.html">Home</a>
+            </li>
+            <li class="hideOnMobile d-md-none d-sm-none d-lg-block">
+              <a href="category_pages/panjabi.html">Panjabi</a>
+            </li>
+
+            <li class="hideOnMobile d-md-none d-sm-none d-lg-block">
+              <div class="dropdown">
+                <a class="nav-links" href="/category_pages/panjabi.html">
+                  T-shirt
+                  <i class="bx bx-chevron-down"></i>
+                </a>
+                <ul class="dropdown-content">
+                  <li>
+                    <a href="/category_pages/panjabi.html"
+                      >Designer Edition T-Shirt</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/category_pages/panjabi.html">Sports T-Shirt</a>
+                  </li>
+                  <li>
+                    <a href="/category_pages/panjabi.html">Solid T-Shirt</a>
+                  </li>
+                  <li>
+                    <a href="/category_pages/panjabi.html">Graphics T-Shirt</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="hideOnMobile d-md-none d-sm-none d-lg-block">
+              <div class="dropdown">
+                <a class="nav-links" href="/category_pages/panjabi.html">
+                  Shirt
+                  <i class="bx bx-chevron-down"></i>
+                </a>
+                <ul class="dropdown-content">
+                  <li>
+                    <a href="/category_pages/panjabi.html">Denim Shirt</a>
+                  </li>
+                  <li>
+                    <a href="/category_pages/panjabi.html"
+                      >Casual Print Shirt</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/category_pages/panjabi.html">Solid Shirt</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="hideOnMobile d-md-none d-sm-none d-lg-block">
+              <a href="/category_pages/panjabi.html">Summer Tracksut Combo</a>
+            </li>
+            <li class="hideOnMobile d-md-none d-sm-none d-lg-block">
+              <a href="/category_pages/panjabi.html">Polo Shirt</a>
+            </li>
+            <li class="hideOnMobile d-md-none d-sm-none d-lg-block">
+              <a href="/category_pages/panjabi.html">Boxer</a>
+            </li>
+            <li class="hideOnMobile d-md-none d-sm-none d-lg-block">
+              <div class="dropdown">
+                <a class="nav-links" href="/category_pages/panjabi.html">
+                  Winter
+                  <i class="bx bx-chevron-down"></i>
+                </a>
+                <ul class="dropdown-content">
+                  <li>
+                    <a href="/category_pages/panjabi.html"
+                      >Long Sleeve T-Shirt</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/category_pages/panjabi.html">Sweatshirt</a>
+                  </li>
+                  <li><a href="/category_pages/panjabi.html">Hoodie</a></li>
+                  <li><a href="/category_pages/panjabi.html">Joggers</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="hideOnMobile d-md-none d-sm-none d-lg-block">
+              <a href="/category_pages/panjabi.html">Shoe</a>
+            </li>
+            <li class="hideOnMobile d-md-none d-sm-none d-lg-block">
+              <a href="/category_pages/panjabi.html">Trouser</a>
+            </li>
+            <li class="hideOnMobile d-md-none d-sm-none d-lg-block">
+              <div class="dropdown">
+                <a class="nav-links" href=".html">
+                  Accessories
+                  <i class="bx bx-chevron-down"></i>
+                </a>
+                <ul class="dropdown-content">
+                  <li>
+                    <a href=".html">Belt</a>
+                  </li>
+                  <li><a href=".html">Wallet</a></li>
+                  <li>
+                    <a href="/category_pages/panjabi.html">Fashion Mask</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <!-- desktop menubar -->
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- modal -->
+      <section>
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div
+                  class="d-flex align-items-center justify-content-center gap-4 m-auto main-two-bottom"
+                >
+                  <div class="facebook-main position-relative">
+                    <div class="facebook-img">
+                      <img
+                        src="/assets/manfareImage/facebook.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      class="button-facebook d-flex align-items-center"
+                    >
+                      <span class="facebook-text"> LOGIN WITH FACEBOOK </span>
+                    </button>
+                  </div>
+                  <div class="google-main position-relative">
+                    <div class="google-img">
+                      <img
+                        src="/assets/manfareImage/google.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      class="button-google d-flex align-items-center"
+                    >
+                      <span class="google-text"> LOGIN WITH GOOGLE </span>
+                    </button>
+                  </div>
+                </div>
+                <p
+                  type="button"
+                  class="close-bottom"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <i class="bx bx-x"></i>
+                </p>
+              </div>
+              <div class="modal-body">
+                <div
+                  class="login-suff d-flex justify-content-center align-items-center flex-column"
+                >
+                  <h4>LOGIN WITH OTP CODE</h4>
+                  <div class="button-input">
+                    <input type="text" placeholder="0 1 X X X - X X X X X X" />
+                    <button>SEND CODE</button>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-lg-6">
+                    <div class="main-form">
+                      <h5>LOGIN</h5>
+                      <form>
+                        <div class="mobile-number">
+                          <label for="mobile">Mobile number</label>
+                          <input type="text" />
+                        </div>
+                        <div class="password">
+                          <label for="password">Password</label>
+                          <input type="text" />
+                        </div>
+                        <div class="form-check d-flex gap-2 checked">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckChecked"
+                            checked
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexCheckChecked"
+                          >
+                            Remeber Me
+                          </label>
+                        </div>
+                        <div>
+                          <button type="button">LOGIN</button>
+                          <p>Forgot Password?</p>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="main-formS">
+                      <h5>REGISTER</h5>
+                      <form>
+                        <div class="mobile-number">
+                          <label for="mobile">Mobile number</label>
+                          <input type="text" />
+                        </div>
+                        <div class="password">
+                          <label for="password">Password</label>
+                          <input type="text" />
+                        </div>
+                        <div class="form-check d-flex gap-2 checked">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckChecked"
+                            checked
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexCheckChecked"
+                          >
+                            Remeber Me
+                          </label>
+                        </div>
+                        <div>
+                          <button type="button">REGISTER</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- modal -->
+      <h4 class="text-center">View Cart</h4>
+      <div class="container">
+        <div class="row">
+          <div class="col-xxl-8 col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="responsive-table">
+              <table id="customers">
+                <thead>
+                  <tr class="conterfeit">
+                    <th class="sl-column">SL</th>
+                    <th class="image-column">Image</th>
+                    <th class="product-name">Name</th>
+                    <th class="price-column">Price</th>
+                    <th class="quantity-column">Quantity</th>
+                    <th class="remove-column">Removie</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="exact-tr">
+                    <td class="sl-column">1</td>
+                    <td class="image-column">
+                      <img
+                        src="../assets/panjabiImages/img-20.jpeg"
+                        alt="Product 1"
+                        class="img-fluid img-fix"
+                      />
+                    </td>
+                    <td class="product-name"><a href="">Product Name</a></td>
+                    <td class="price-column">BDT 5000</td>
+                    <td class="quantity-column">
+                      <div class="counter-box">
+                        <div class="minus-btn">-</div>
+                        <input type="text" value="1" />
+                        <div class="plus-btn">+</div>
+                      </div>
+                    </td>
+                    <td class="remove-column">
+                      <i class="bx bxs-trash-alt"></i>
+                    </td>
+                  </tr>
+                  <tr class="exact-tr">
+                    <td class="sl-column">2</td>
+                    <td class="image-column">
+                      <img
+                        src="../assets/panjabiImages/img-20.jpeg"
+                        alt="Product 1"
+                        class="img-fluid img-fix"
+                      />
+                    </td>
+                    <td class="product-name"><a href="#">Product Name</a></td>
+                    <td class="price-column">BDT 5000</td>
+                    <td class="quantity-column">
+                      <div class="counter-box">
+                        <div class="minus-btn">-</div>
+                        <input type="text" value="150" />
+                        <div class="plus-btn">+</div>
+                      </div>
+                    </td>
+                    <td class="remove-column">
+                      <i class="bx bxs-trash-alt"></i>
+                    </td>
+                  </tr>
+                  <tr class="exact-tr">
+                    <td class="image-column">3</td>
+                    <td class="image-column">
+                      <img
+                        src="../assets/panjabiImages/img-20.jpeg"
+                        alt="Product 1"
+                        class="img-fluid img-fix"
+                      />
+                    </td>
+                    <td class="product-name"><a href="#">Product Name</a></td>
+                    <td class="price-column">BDT 5000</td>
+                    <td class="quantity-column">
+                      <div class="counter-box">
+                        <div class="minus-btn">-</div>
+                        <input type="text" value="1" />
+                        <div class="plus-btn">+</div>
+                      </div>
+                    </td>
+                    <td class="remove-column">
+                      <i class="bx bxs-trash-alt"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-xxl-4 col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="main-back">
+              <div class="subtotal d-flex justify-content-between">
+                <div>
+                  <h5>Subtotal</h5>
+                </div>
+                <div>
+                  <p>BDT 5000</p>
+                </div>
+              </div>
+              <hr />
+              <div class="calculate">
+                <p class="fw-bold calculate-ship">Calculate Shipping</p>
+
+                <div class="inicons d-flex gap-2">
+                  <div class="icons">
+                    <i class="bx bxs-spa"></i>
+                  </div>
+                  <div class="inside-dhaka">
+                    <p>Inside Dhaka: <strong>BDT 80</strong></p>
+                  </div>
+                </div>
+                <div class="inicons d-flex gap-2">
+                  <div class="icons">
+                    <i class="bx bxs-spa"></i>
+                  </div>
+                  <div class="inside-dhaka">
+                    <p>
+                      Dhaka Sub Area:
+                      <sup class="area">
+                        (Savar, Ashulia, Gazipur, kerangonj)</sup
+                      >
+                      <strong>BDT 120</strong>
+                    </p>
+                  </div>
+                </div>
+                <div class="inicons d-flex gap-2">
+                  <div class="icons">
+                    <i class="bx bxs-spa"></i>
+                  </div>
+                  <div class="inside-dhaka">
+                    <p>Outside Dhaka: <strong>BDT 150</strong></p>
+                  </div>
+                </div>
+                <div class="inicons d-flex gap-2">
+                  <div class="icons">
+                    <i class="bx bxs-spa"></i>
+                  </div>
+                  <div class="inside-dhaka">
+                    <p>
+                      Emergency Delivery : <sup>Inside Dhaka</sup>
+                      <strong>BDT 200</strong>
+                    </p>
+                  </div>
+                </div>
+                <div class="inicons d-flex gap-2">
+                  <div class="icons">
+                    <i class="bx bxs-spa"></i>
+                  </div>
+                  <div class="inside-dhaka">
+                    <p>Office Pickup: <strong>BDT 0.0</strong></p>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="main-total d-flex justify-content-between">
+                <div>
+                  <h5>Total</h6>
+                </div>
+                <div>
+                  <h5>BDT 5000</h6>
+                </div>
+              </div>
+              <div>
+                <a class="btn-process" href="#">Process Checkout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+        <!-- Footer  -->
+        <footer class="mt-xl-5 mt-xxl-5 mt-lg-5 mt-sm-2 mt-2 footer">
+          <div class="container pt-5 pb-5">
+            <div class="row mb-5">
+              <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+                <div class="manfare-content">
+                  <img
+                    class="img-fluid"
+                    src="/assets/footerImages/footer-img-1.png"
+                    alt=""
+                    style="width: 67%"
+                  />
+                  <p class="phone-num">+880 9606999695</p>
+                  <p class="manfare-text">Worktime: SAT - FRI, 10AM - 11PM</p>
+                  <div class="social-icons">
+                    <span>
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 24 24"
+                        style="color: #b89579; size: 1.3em"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"
+                        ></path>
+                      </svg>
+                    </span>
+                    <span>
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 1024 1024"
+                        style="color: #b89579; size: 1.3em"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M512 306.9c-113.5 0-205.1 91.6-205.1 205.1S398.5 717.1 512 717.1 717.1 625.5 717.1 512 625.5 306.9 512 306.9zm0 338.4c-73.4 0-133.3-59.9-133.3-133.3S438.6 378.7 512 378.7 645.3 438.6 645.3 512 585.4 645.3 512 645.3zm213.5-394.6c-26.5 0-47.9 21.4-47.9 47.9s21.4 47.9 47.9 47.9 47.9-21.3 47.9-47.9a47.84 47.84 0 0 0-47.9-47.9zM911.8 512c0-55.2.5-109.9-2.6-165-3.1-64-17.7-120.8-64.5-167.6-46.9-46.9-103.6-61.4-167.6-64.5-55.2-3.1-109.9-2.6-165-2.6-55.2 0-109.9-.5-165 2.6-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6 46.9 46.9 103.6 61.4 167.6 64.5 55.2 3.1 109.9 2.6 165 2.6 55.2 0 109.9.5 165-2.6 64-3.1 120.8-17.7 167.6-64.5 46.9-46.9 61.4-103.6 64.5-167.6 3.2-55.1 2.6-109.8 2.6-165zm-88 235.8c-7.3 18.2-16.1 31.8-30.2 45.8-14.1 14.1-27.6 22.9-45.8 30.2C695.2 844.7 570.3 840 512 840c-58.3 0-183.3 4.7-235.9-16.1-18.2-7.3-31.8-16.1-45.8-30.2-14.1-14.1-22.9-27.6-30.2-45.8C179.3 695.2 184 570.3 184 512c0-58.3-4.7-183.3 16.1-235.9 7.3-18.2 16.1-31.8 30.2-45.8s27.6-22.9 45.8-30.2C328.7 179.3 453.7 184 512 184s183.3-4.7 235.9 16.1c18.2 7.3 31.8 16.1 45.8 30.2 14.1 14.1 22.9 27.6 30.2 45.8C844.7 328.7 840 453.7 840 512c0 58.3 4.7 183.2-16.2 235.8z"
+                        ></path>
+                      </svg>
+                    </span>
+                    <span>
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 16 16"
+                        style="color: #b89579; size: 1.3em"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                        ></path>
+                      </svg>
+                    </span>
+    
+                    <span>
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 32 32"
+                        style="color: #b89579; size: 1.3em"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M 16 4 C 9.410156 4 4 9.136719 4 15.5 C 4 18.890625 5.570313 21.902344 8 24 L 8 28.625 L 12.4375 26.40625 C 13.566406 26.746094 14.746094 27 16 27 C 22.589844 27 28 21.863281 28 15.5 C 28 9.136719 22.589844 4 16 4 Z M 16 6 C 21.558594 6 26 10.265625 26 15.5 C 26 20.734375 21.558594 25 16 25 C 14.804688 25 13.664063 24.773438 12.59375 24.40625 L 12.1875 24.28125 L 10 25.375 L 10 23.125 L 9.625 22.8125 C 7.40625 21.0625 6 18.441406 6 15.5 C 6 10.265625 10.441406 6 16 6 Z M 14.875 12.34375 L 8.84375 18.71875 L 14.25 15.71875 L 17.125 18.8125 L 23.09375 12.34375 L 17.8125 15.3125 Z"
+                        ></path>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+                <h4 class="manfare-sm-text">Information</h4>
+              </div>
+              <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+                <h4 class="manfare-sm-text">CONTACT INFO</h4>
+                <ul class="contact-list">
+                  <li>
+                    Bashundhara City Shopping Complex, <br />
+                    Level-3, Block-D, Shop 45, 46, <br />Panthapath, Dhaka.
+                  </li>
+                  <li>manfarebd@gmail.com</li>
+                  <li>
+                    09606999695 | 01948-898198 <br />
+                    01730-642262 | 01845-813237
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="col-lg-3 col-md-12 col-sm-12 col-12 d-none d-sm-none d-md-none d-lg-block"
+              >
+                <iframe
+                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmanfareltd&amp;tabs&amp;width=500&amp;height=400&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=233929552127013"
+                  width="100%"
+                  height="195"
+                  style="border: none; overflow: hidden"
+                  scrolling="no"
+                  frameborder="0"
+                  allowfullscreen=""
+                  data-show-facepile="true"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                ></iframe>
+              </div>
+            </div>
+            <div class="cards-images">
+              <img
+                src="/assets/footerImages/footer-img-2.png"
+                class="img-fluid d-lg-block d-md-none d-sm-none d-none"
+                alt=""
+              />
+              <img
+                src="/assets/footerImages/footer-res-img.png"
+                class="img-fluid d-lg-none d-md-block d-sm-block d-block"
+                alt=""
+              />
+            </div>
+          </div>
+    
+          <!-- menubar -->
+        </footer>
+        <!-- Footer  -->
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+      ></script>
+    <script type="module" src="/main.js"></script>
+    <script src="../src/index.js"></script>
+  </body>
+</html>

@@ -285,11 +285,19 @@
 // footer
 
 .footer {
-  background-image: url(../../../assets/footerImages/footer-bg-img.jpeg);
+  background-image: url(/assets/footerImages/footer-bg-img.jpeg);
   background-position: center;
   background-size: cover;
   height: auto;
   width: auto;
+  .info-texts {
+    padding: 0px;
+  }
+  .info-texts li a {
+    color: rgb(208 208 208/1);
+    font-weight: 700;
+    text-decoration: none !important;
+  }
   .manfare-content {
     @include desktop() {
       text-align: center;

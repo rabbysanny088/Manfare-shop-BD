@@ -211,11 +211,13 @@ function generateCard(cardData) {
   return `
     <div class="col-lg-4 col-md-4 col-sm-6 col-6 mb-4">
         <div class="card">
+        <a href="/single_product.html">
             <img
                 src="${cardData.imgSrc}"
                 alt="${cardData.altText}"
                 class="category-img img-fluid"
             />
+            </a>
             <p class="sm-box">
                   <span>0.0</span>
                   <svg
@@ -247,7 +249,7 @@ function generateCard(cardData) {
     cardData.originalPrice
   }</sub>
                 </p>
-                <button type="button" class="card-btn">Add to cart</button>
+                <button type="button" class="card-btn" >Add to cart</button>
             </div>
         </div>
     </div>`;

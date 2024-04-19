@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.conterfeit {
+  border-bottom: 2px solid black !important;
+}
+.exact-tr {
+  border-bottom: 1px solid rgb(241, 241, 241);
+}
+
+.image-column {
+  width: 10%;
+}
+.sl-column {
+  width: 10%;
+  /* display: flex; */
+}
+#customers {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  padding: 0.5rem 0.5rem;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: black;
+}
+
+.img-fix {
+  width: 60%;
+}
+
+.product-name a {
+  text-decoration: none;
+  color: black;
+}
+
+.product-name a:hover {
+  color: #fcb800;
+  cursor: pointer;
+}
+
+.remove-column {
+  width: 7%;
+  text-align: right;
+}
+
+.remove-column i {
+  font-size: 20px;
+}
+.remove-column i:hover {
+  color: #fcb800;
+  cursor: pointer;
+}
+
+.counter-box {
+  display: flex;
+  width: 100%;
+  max-width: 97px;
+  height: 28px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.counter-box button {
+  width: 40px;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.counter-box input {
+  width: 46px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-left: 1px solid #ccdeef;
+  border-right: 1px solid #ccdeef;
+  text-align: center;
+}
+
+.counter-box .minus-btn {
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.counter-box .plus-btn {
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.responsive-table {
+  overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+  .img-fix {
+    width: 100%;
+  }
+
+  .product-name {
+    font-size: 14px;
+  }
+  .price-column {
+    font-size: 14px;
+  }
+  .quantity-column {
+    font-size: 14px;
+  }
+}
+
+/* ********************************************************** */
+.calculate-ship {
+  border-bottom: 1px dashed #dddddd;
+  padding-bottom: 5px;
+}
+
+.btn-process {
+  display: inline-block;
+  color: #fff;
+  background-color: #fcb800;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0px;
+  border-radius: 3px;
+  font-size: 18px;
+  text-transform: capitalize;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  border: 0;
+  text-decoration: none;
+}
+
+.btn-process a {
+  text-decoration: none;
+  color: #fff;
+}
+.btn-process a:hover {
+  color: #fcb800;
+}
+
+.btn-process:hover {
+  border: 1px solid #fcb800;
+  background-color: transparent;
+  color: #fcb800;
+}
+
+.main-back {
+  box-shadow: 0px 30px 70px rgba(1, 15, 28, 0.1);
+  background-color: #fff;
+  padding: 20px;
+}
+
+/* ********************************************************** */
